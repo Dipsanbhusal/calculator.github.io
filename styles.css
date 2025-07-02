@@ -1,0 +1,120 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: url('nature.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px; /* Maximum width for large screens */
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative; /* Allows positioning of social links at the bottom */
+}
+
+.title {
+    font-size: 2em;
+    color: #fff;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle shadow for better readability */
+    text-align: center;
+}
+
+.calculator {
+    background: rgba(255, 255, 255, 0.1); /* Slightly more transparent for a sleek look */
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5); /* Increased shadow for depth */
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden; /* Ensures rounded corners are visible */
+}
+
+.display {
+    background: rgba(0, 0, 0, 0.8);
+    color: #00FF7F; /* Bright green text for a modern, digital feel */
+    font-size: 2.5em;
+    padding: 20px;
+    text-align: right;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    box-sizing: border-box;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1px;
+    background: rgba(0, 0, 0, 0.2); /* Separator color for button grid */
+}
+
+.btn {
+    background: rgba(255, 255, 255, 0.7); /* Transparent button backgrounds */
+    border: none; /* Removed borders for a cleaner look */
+    font-size: 1.5em;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+    background: rgba(255, 255, 255, 0.9); /* Slightly brighter on hover */
+}
+
+.btn:active {
+    background: #ddd;
+    transform: scale(0.96); /* Stronger scaling effect for better feedback */
+}
+
+.btn.zero {
+    grid-column: span 2; /* Span two columns for the zero button */
+}
+
+.btn.equal {
+    background: #007BFF;
+    color: #fff;
+    border-bottom-right-radius: 20px; /* Rounded corner for the last button */
+}
+
+.btn.equal:hover {
+    background: #0056b3;
+}
+
+.btn.equal:active {
+    background: #004494;
+}
+
+.social-links {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.social-icon {
+    color: #fff;
+    font-size: 1.5em;
+    transition: color 0.3s, transform 0.3s;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #007BFF; /* Change the color on hover */
+    transform: scale(1.1); /* Slight zoom effect */
+}
